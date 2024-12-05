@@ -1,7 +1,8 @@
-var table = document.querySelector("table");
-var rows = table.rows;
+document.getElementById("change").addEventListener("click", func);
 
-for (var i = 0; i < rows.length; i++) {
-    var td = rows[i].cells[i];
-    td.style.backgroundColor = "yellow";
+function func() {
+    var elements = document.querySelectorAll(".pr");
+    elements.forEach((element, index) => {
+        element.textContent = index + 1; // Устанавливаем порядковый номер
+    });
 }
